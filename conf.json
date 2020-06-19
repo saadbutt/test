@@ -1,0 +1,36 @@
+{
+  "dataSource": {
+    "driverName": "mysql",
+    "addr": "127.0.0.1:3306",
+    "database": "spot",
+    "user": "test",
+    "password": "test",
+    "enableAutoMigrate": false
+  },
+  "redis": {
+    "addr": ":6379",
+    "password": ""
+  },
+  "kafka": {
+    "brokers": [
+      "localhost:9092",
+      "localhost:9093",
+      "localhost:9094"
+    ]
+  },
+  "pushServer": {
+    "addr": ":8002",
+    "path": "/ws"
+  },
+  "restServer": {
+    "addr": ":8001"
+  },
+  "frontendBaseURL":"http://localhost:3000",
+  "backendBaseURL":"http://localhost:8001",
+  "jwtSecret": "flj23jfoi23apdl3jfslkj23za01mf3",
+  "secretMainServer": {
+    "addr": "http://localhost:4000"
+  },
+  "projectName":"StableExchange",
+  "apiStackKey":"ef393381cb37599c054fbaa449f1fa34"
+}
