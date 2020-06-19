@@ -16,6 +16,7 @@ package conf
 
 import (
 	"encoding/json"
+	"fmt"
 	"io/ioutil"
 	"path"
 	"path/filepath"
@@ -86,7 +87,10 @@ func SetConfFileName(fileName string) {
 func GetConfig() *GbeConfig {
 	configOnce.Do(func() {
 		rootPath := RootDir()
+		rootPath = "/home/wm/backend-exchange/wegaswap-spot/"
+		fmt.Println("rootPath:", rootPath)
 		configPath := rootPath + confFileName
+		fmt.Println("confFileName:", confFileName)
 		bytes, err := ioutil.ReadFile(configPath)
 		if err != nil {
 			panic(err)
